@@ -1,0 +1,39 @@
+*{
+    padding: 0px;
+    margin: 0px;
+	background-color: #ffefcc;
+}
+
+
+body{
+    text-align: center;
+}
+
+canvas{
+    background: #ffa366;
+	box-shadow: 5px 5px 50px #ffd1b3;
+    -webkit-transition: -webkit-transform 1s;
+}
+
+canvas:hover
+{
+	width: 51px;
+	height: 51px;
+}
+
+#canvasDiv{
+    margin: 150px auto 40px;
+}
+
+#reloadButton
+{
+    text-decoration: none;
+    color: #ff6600;
+	text-shadow: 5px 5px 50px #ffa366;
+    font: 20px tahoma;
+}
+
+#reloadButton:hover
+{
+    font-size: 22px;
+}
