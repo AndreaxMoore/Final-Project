@@ -35,7 +35,8 @@ Get all elements that have a class of 'stopwatch'*/
     function startTimer(){
         if (!interval){/*if we don't have a timer running, we will start a new one*/
             lastUpdateTime = new Date().getTime();
-            interval = setInterval(update,1);
+            interval = setInterval(update,1);/*The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+            The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.*/
         }
     }
 
