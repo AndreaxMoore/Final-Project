@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Timer</title>
+    <link rel = "stylesheet" href = "stopwatch.css">
 </head>
 <body>
+    <div class = "stopwatch">
+        <div class = "controls">
+            <button class = 'start'>Start</button>
+            <button class = 'stop'>Stop</button>
+            <button class = 'reset'>Reset</button>
+        </div>
 
+        <div class = "display">
+            <span class = "minutes">00</span><span class = "seconds">00</span><span class = "centiseconds">00</span>
+            <!--The span tag is used with inline elements whilst the div tag is used with block-level content.-->
+        </div>
+    </div>
+        <script src = "stopwatch.js"></script>
 </body>
 </html>
