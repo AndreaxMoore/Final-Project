@@ -101,3 +101,11 @@ function draw0Steps(x)//when click on button 1, random draw o on button 5, x = 5
 		ctx[x].closePath();
 	}, 300);
 }
+
+function checkWinner()
+{
+	if(!isResult)
+	{
+		if(content[1] == 'x' && content[2] == 'x' && content[x])
+	}
+}
