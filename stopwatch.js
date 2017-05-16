@@ -20,12 +20,28 @@ Get all elements that have a class of 'stopwatch'*/
     function update(){
         var now = new Date().getTime(),
             dt = now - lastUpdateTime;
+
         currentTimer += dt;
+
         var time = new Date(currentTimer);
+
         minutes.innerHTML = pad(time.getMinutes());
         seconds.innerHTML = pad(time.getSeconds());
         centiseconds.innerHTML = pad(time.getMilliseconds()/10);
+
         lastUpdateTime = now;
+    }
+
+    function startTimer(){
+        if (!interval){/*if we don't have a timer running, we will start a new one*/
+            lastUpdateTime = new Date().getTime();
+            interval = setInterval(update,1);
+        }
+    }
+
+    function stopTimer(){
+        clearInterval(interval);
+        interval = 0;
     }
     });
 
