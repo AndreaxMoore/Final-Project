@@ -1,13 +1,14 @@
 .stopwatch{
     width: 350px;
     background-color: mistyrose;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px rgba(0,0,0, 0.75), 0 0 1px rgba(0,0,0, 0.15);
     /*-webkit-box-shadow: rgb(110, 110, 110) 8px 8px 7px;*/
     padding: 15px;}
 
     .controls {
-        display: flex;}
+        display: flex;
+		background-color: mistyrose;}
 
         button {
             flex-grow: 1;
@@ -59,11 +60,12 @@
         font-size: 50px;
         font-family: sans-serif;
         text-align:center;
-        margin-top: 10px;}
+        margin-top: 10px;
+		}
 
     span:not(:last-child):after {
         content: ':';
-    }
+		}
 
 
 
