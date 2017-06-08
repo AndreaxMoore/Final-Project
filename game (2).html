@@ -3,27 +3,11 @@
 <html>
 <head>
 	<link rel = "stylesheet" type = "text/css" href = "gamedesign.css"/>
-	<title>Timer</title>
-    <link rel = "stylesheet" href = "stopwatch.css">
+	
 </head>
 
 <body>
-    <h1>Five-in-a-Row Game!</h1>
-	<div class = "stopwatch">
-        <div class = "controls">
-            <button class = "start">Start</button>
-            <button class = "stop">Stop</button>
-            <button class = "reset">Reset</button>
-        </div>
-
-        <div class = "display">
-            <span class = "minutes">00</span><span class = "seconds">00</span><span class = "centiseconds">00</span>
-            <!--The span tag is used with inline elements whilst the div tag is used with block-level content.-->
-        </div>
-    </div>
-        <script src = "stopwatch.js"></script>
-	
-	<div id = "canvasDiv">
+    <div id = "canvasDiv">
     <canvas id = "canvas1" width = "50" height = "50" onclick = "loop(1)"></canvas>
     <canvas id = "canvas2" width = "50" height = "50" onclick = "loop(2)"></canvas>
     <canvas id = "canvas3" width = "50" height = "50" onclick = "loop(3)"></canvas>
@@ -182,8 +166,7 @@
     <canvas id = "canvas144" width = "50" height = "50" onclick = "loop(144)"></canvas><br/>
     </div>
 
-    
-	<button id = "button1"><a href = "game (2).html">Play Again!</a></button>
+    <button><a href = "game (2).html">Play Again!</a></button>
 	
 	<script src = "java.js"></script>
 	
