@@ -19,6 +19,10 @@ function loop(x)
         content[x] = 'x';
 
         button[x].style.webkitTransform = "rotateY(180deg)";
+		button[x].style.MozTransform = "rotateY(180deg)";
+		button[x].style.OTransform = "rotateY(180deg)";
+		button[x].style.msTransform = "rotateY(180deg)";
+		
 		
 		setTimeout(function()//delay this code for drawing
 		{
@@ -374,32 +378,38 @@ function computerTurn()
 	else if(content[43] == 'o' && content[54] == 'o' && content[87] == 'o'&& content[76] == 'o'&& !bDisabled[65]) draw0Steps(65);
 	else if(content[43] == 'o' && content[65] == 'o' && content[76] == 'o'&& content[87] == 'o'&& !bDisabled[54]) draw0Steps(54);
 	else if(content[54] == 'o' && content[65] == 'o' && content[76] == 'o'&& content[87] == 'o'&& !bDisabled[43]) draw0Steps(43);
-	
-else if(r < 0.1 && !bDisabled[1]) draw0Steps(1); //if r(a random #) is less than 0.1, if bDisabled[1] is false, then run draw0Steps(1)
+	else if(r < 0.1 && !bDisabled[68]) draw0Steps(68); //if r(a random #) is less than 0.1, if bDisabled[1] is false, then run draw0Steps(1)
 else if(r < 0.2 && !bDisabled[41]) draw0Steps(41);
 else if(r < 0.3 && !bDisabled[52]) draw0Steps(52);
-else if(r < 0.4 && !bDisabled[4]) draw0Steps(4);
+else if(r < 0.4 && !bDisabled[54]) draw0Steps(54);
 else if(r < 0.5 && !bDisabled[53]) draw0Steps(53);
 else if(r < 0.6 && !bDisabled[63]) draw0Steps(63);
-else if(r < 0.7 && !bDisabled[73]) draw0Steps(73);
+else if(r < 0.7 && !bDisabled[64]) draw0Steps(64);
 else if(r < 0.8 && !bDisabled[84]) draw0Steps(84);
 else if(r < 0.9 && !bDisabled[95]) draw0Steps(95);
 else if(r < 0.10 && !bDisabled[110]) draw0Steps(110);
 else if(r < 0.11 && !bDisabled[113]) draw0Steps(113);
 else if(r < 0.12 && !bDisabled[122]) draw0Steps(122);
 
-else if(r < 0.13 && !bDisabled[13]) draw0Steps(13);
-else if(r < 0.14 && !bDisabled[14]) draw0Steps(14);
-else if(r < 0.15 && !bDisabled[15]) draw0Steps(15);
-else if(r < 0.16 && !bDisabled[16]) draw0Steps(16);
-else if(r < 0.17 && !bDisabled[17]) draw0Steps(17);
-else if(r < 0.18 && !bDisabled[18]) draw0Steps(18);
-else if(r < 0.19 && !bDisabled[19]) draw0Steps(19);
-else if(r < 0.20 && !bDisabled[20]) draw0Steps(20);
+else if(r < 0.13 && !bDisabled[43]) draw0Steps(43);
+else if(r < 0.14 && !bDisabled[74]) draw0Steps(74);
+else if(r < 0.15 && !bDisabled[85]) draw0Steps(85);
+else if(r < 0.16 && !bDisabled[56]) draw0Steps(56);
+else if(r < 0.17 && !bDisabled[37]) draw0Steps(37);
+else if(r < 0.18 && !bDisabled[98]) draw0Steps(98);
+else if(r < 0.19 && !bDisabled[39]) draw0Steps(39);
+else if(r < 0.20 && !bDisabled[66]) draw0Steps(66);
 else if(r < 0.21 && !bDisabled[21]) draw0Steps(21);
 else if(r < 0.22 && !bDisabled[22]) draw0Steps(22);
 else if(r < 0.23 && !bDisabled[23]) draw0Steps(23);
 else if(r < 0.24 && !bDisabled[24]) draw0Steps(24);
+else if(r < 0.25 && !bDisabled[40]) draw0Steps(40);
+else if(r < 0.26 && !bDisabled[42]) draw0Steps(42);
+else if(r < 0.27 && !bDisabled[65]) draw0Steps(65);
+else if(r < 0.28 && !bDisabled[76]) draw0Steps(76);
+else if(r < 0.29 && !bDisabled[123]) draw0Steps(123);
+else if(r < 0.30 && !bDisabled[116]) draw0Steps(116);
+else if(r < 0.31 && !bDisabled[60]) draw0Steps(60);
 else computerTurn();
 		
 		
@@ -413,6 +423,9 @@ function draw0Steps(x)//when click on button 1, random draw o on button 5, x = 5
 	button[x].style.opacity = 0.7;
 	content[x] = 'o'; 
 	button[x].style.webkitTransform = "rotateX(180deg)";
+	button[x].style.MozTransform = "rotateX(180deg)";
+	button[x].style.OTransform = "rotateX(180deg)";
+	button[x].style.msTransform = "rotateX(180deg)";
 	
 	setTimeout(function()
 	{
@@ -455,6 +468,23 @@ function checkWinner()
 		else if(content[40] == 'o' && content[53] == 'o' && content[66] == 'o'&& content[79] == 'o'&& content[92] == 'o') showWinner('You lose');
 		else if(content[44] == 'o' && content[55] == 'o' && content[66] == 'o'&& content[77] == 'o'&& content[88] == 'o') showWinner('You lose');
 		
+		else if(content[39] == 'x' && content[40] == 'x' && content[41] == 'x' && content[42] == 'x'&& content[43] == 'x') showWinner('You win');
+		else if(content[39] == 'x' && content[51] == 'x' && content[63] == 'x'&& content[75] == 'x'&& content[87] == 'x') showWinner('You win');
+		else if(content[52] == 'x' && content[53] == 'x' && content[54] == 'x'&& content[55] == 'x'&& content[51] == 'x') showWinner('You win');
+		else if(content[64] == 'x' && content[65] == 'x' && content[66] == 'x'&& content[67] == 'x'&& content[63] == 'x') showWinner('You win');
+		else if(content[76] == 'x' && content[77] == 'x' && content[78] == 'x'&& content[79] == 'x'&& content[75] == 'x') showWinner('You win');
+		else if(content[88] == 'x' && content[89] == 'x' && content[90] == 'x'&& content[91] == 'x'&& content[87] == 'x') showWinner('You win');
+		else if(content[39] == 'x' && content[52] == 'x' && content[65] == 'x'&& content[78] == 'x'&& content[91] == 'x') showWinner('You win');
+		else if(content[43] == 'x' && content[54] == 'x' && content[65] == 'x'&& content[76] == 'x'&& content[87] == 'x') showWinner('You win');
+		//remember to change x to o!!!
+		else if(content[39] == 'o' && content[40] == 'o' && content[42] == 'o'&& content[43] == 'o'&& content[41] == 'o') showWinner('You lose');
+		else if(content[39] == 'o' && content[51] == 'o' && content[63] == 'o'&& content[75] == 'o'&& content[87] == 'o') showWinner('You lose');
+		else if(content[52] == 'o' && content[53] == 'o' && content[54] == 'o'&& content[55] == 'o'&& content[51] == 'o') showWinner('You lose');
+		else if(content[64] == 'o' && content[65] == 'o' && content[66] == 'o'&& content[67] == 'o'&& content[63] == 'o') showWinner('You lose');
+		else if(content[76] == 'o' && content[77] == 'o' && content[78] == 'o'&& content[79] == 'o'&& content[75] == 'o') showWinner('You lose');
+		else if(content[88] == 'o' && content[89] == 'o' && content[90] == 'o'&& content[91] == 'o'&& content[87] == 'o') showWinner('You lose');
+		else if(content[39] == 'o' && content[52] == 'o' && content[65] == 'o'&& content[78] == 'o'&& content[91] == 'o') showWinner('You lose');
+		else if(content[43] == 'o' && content[54] == 'o' && content[65] == 'o'&& content[76] == 'o'&& content[87] == 'o') showWinner('You lose');
 	}	
 }
 
