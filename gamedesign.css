@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Righteous');
+
+h1{
+	margin-top: 50px;
+	font-family: 'Righteous', cursive;
+	font-size: 50px;
+	}
 *{
     padding: 0px;
     margin: 0px;
@@ -13,6 +21,9 @@ canvas{
     background: #ffa366;
 	box-shadow: 5px 5px 50px #ffd1b3;
     -webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-ms-transition: -ms-transform 1s;
+	-o-transition: -o-transform 1s;
 }
 
 canvas:hover
@@ -22,18 +33,29 @@ canvas:hover
 }
 
 #canvasDiv{
-    margin: 150px auto 40px;
+    margin: 70px auto 40px;
 }
 
-#reloadButton
+
+
+#button1
 {
-    text-decoration: none;
+	width: 250px;
+	height: 50px;
+	margin-bottom: 200px;
+	border: 2px solid orange;
+	background-color:#ffefcc;
+}
+
+a
+{
+	text-decoration: none;
     color: #ff6600;
 	text-shadow: 5px 5px 50px #ffa366;
     font: 20px tahoma;
 }
 
-#reloadButton:hover
+#button1:hover
 {
     font-size: 22px;
 }
